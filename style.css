@@ -14,7 +14,7 @@
     justify-content: space-evenly;
     position: fixed;
     z-index: 1000;
-    width: 100vw;
+    max-width: 100vw;
     overflow: hidden;
     
 }
@@ -178,7 +178,7 @@
 }
 header{
     overflow: hidden;
-    width: 100vw;
+    max-width:  100vw;
 }
 
 .nav-main-menu{
@@ -222,7 +222,7 @@ header{
 }
 body{
     background-color: #e6e6e6;
-    width: 100vw;
+    max-width: 100vw;
     overflow-x: hidden;
     justify-content: center;
 }
@@ -242,29 +242,44 @@ body{
     height :100px ;
     width: 23%;
     height: 385px;
-    padding-top: 20px;
-    padding-bottom: 15px;
+    padding: 20px 15px;
     background:white;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 .boxheading{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding:0 15px;
+    margin-bottom: 20px;
 }
+.boxheading h3{
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
 img:hover{
     cursor: pointer;
 }
 .images{
+    
     display: flex;
-    width: 350px;
-    margin-top: 20px;
-    margin-right: 20px;
+    width: 100%;
+   margin: 20px 0 0;
     justify-content: space-evenly;
-    overflow: hidden;
-
+    flex-wrap: wrap;
 }
-
-p{
+.img1 {
+    flex: 1 1 45%;
+    max-width: 45%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.img1 img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+}
+.imag1 p{
     font-size: 12px;
     cursor: pointer;
 }
@@ -329,9 +344,7 @@ p > a:hover{
     margin-bottom: 20px;
 
 }
-.img1{
-    overflow: hidden;
-}
+
 .box_{
     background-color: transparent;
     padding-top: 15px;
@@ -519,4 +532,49 @@ hr{
 }
 .copy:hover{
     text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .box {
+        width: 48%;
+        min-height: 300px;
+    }
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .img1 {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .img1 img {
+        max-height: 80px;
+    }
+}
+@media (max-width: 600px) {
+    /* Adjust header styles */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust product grid styles */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Adjust hero section styles */
+    .hero {
+        padding: 2rem;
+    }
+
+    /* Adjust product card styles */
+    .product-card {
+        margin-bottom: 20px;
+    }
 }
