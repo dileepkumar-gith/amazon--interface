@@ -578,3 +578,11 @@ hr{
         margin-bottom: 20px;
     }
 }
+#to_top{
+    align-items: center;
+    justify-content: center;
+}
+.box12{
+    align-items: center;
+    justify-content: center;
+}
