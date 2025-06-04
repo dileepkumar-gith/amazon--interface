@@ -748,7 +748,7 @@ hr{
     align-items: center;
     justify-content: center;
 }
-/*@media (min-width: 320px) and (max-width: 412px) {
+@media (min-width: 320px) and (max-width: 412px) {
   .navbar,
   .nav-main,
   .hero-section,
@@ -766,4 +766,4 @@ hr{
   .nav-order {
     display: none;
   }
-}*/
+}
